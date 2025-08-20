@@ -1,7 +1,6 @@
-let age: any = 25;
+let age: string | number = 25;
 
 // ...
 
+age = 25;
 age = '25';
-age = true;
-age = {};
