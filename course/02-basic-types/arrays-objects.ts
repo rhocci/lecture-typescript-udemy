@@ -8,3 +8,8 @@ let users: Array<string | number>;
 users = [1, 'Max'];
 users = [1, 2];
 users = ['John', 'Max'];
+
+let possibleResults: [number, string];
+
+possibleResults = [1, '하나'];
+// possibleResults = [6, 10, 12];
