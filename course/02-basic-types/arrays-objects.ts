@@ -13,3 +13,21 @@ let possibleResults: [number, string];
 
 possibleResults = [1, '하나'];
 // possibleResults = [6, 10, 12];
+
+let user: {
+  name: string;
+  age: number;
+  hobbies: string[];
+  role: {
+    description: string;
+    id: number;
+  };
+} = {
+  name: 'Max',
+  age: 38,
+  hobbies: ['Sports', 'Cooking'],
+  role: {
+    description: 'Admin',
+    id: 1,
+  },
+};
