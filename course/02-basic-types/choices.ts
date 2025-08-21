@@ -4,7 +4,15 @@
 //   Guest, // 2
 // }
 
-let userRole: 'Admin' | 'Editor' | 'Guest' = 'Admin';
+type Role = 'Admin' | 'Editor' | 'Guest' | 'Reader';
+type User = {
+  name: string;
+  age: number;
+  role: Role;
+  permissions: string[];
+};
+
+let userRole: Role = 'Admin';
 
 // ...
 
