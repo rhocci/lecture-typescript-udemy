@@ -30,7 +30,7 @@ function calculateInvestment(data: dataType): resultType[] {
     const currentReturn = currentTotal - currentInvestment;
 
     const result: resultType = {
-      year: i,
+      year: i + 1,
       total: currentTotal,
       totalInvestment: currentInvestment,
       totalReturn: currentReturn,
