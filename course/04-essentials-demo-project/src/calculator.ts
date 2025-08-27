@@ -42,10 +42,22 @@ function calculateInvestment(data: dataType): resultType[] {
   return results;
 } // = > result[]
 
-// function printResults(results) {
-//   // print (output) the result data
-// }
+function printResults(results: resultType[]): void {
+  // print (output) the result data
+  results.forEach((result) => {
+    console.log('Year: ', result.year);
+    console.log('Total: ', result.total);
+    console.log('Toal Contributions: ', result.totalInvestment);
+    console.log('Total Interest Earned: ', result.totalReturn);
+    console.log('---------------------------');
+  });
+}
 
-// const results = calculateInvestment();
+const results = calculateInvestment({
+  initialInvestment: 10000,
+  annualInvestment: 2000,
+  expectedReturn: 5,
+  duration: 10,
+});
 
-// printResults(results);
+printResults(results);
