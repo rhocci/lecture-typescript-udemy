@@ -52,7 +52,20 @@ function calculateInvestment(data: InvestmentData): CalculationResult {
   return annualResults;
 }
 
-function printResults(results) {}
+function printResults(results: CalculationResult) {
+  if (typeof results === 'string') {
+    console.log(results);
+    return;
+  }
+
+  for (const yearEndResult of results) {
+    console.log(yearEndResult.year);
+    console.log(`Total: ${yearEndResult.totalAmount.toFixed(0)}`);
+    console.log(`Total: ${yearEndResult.totalContributions.toFixed(0)}`);
+    console.log(`Total: ${yearEndResult.totalInterestEarned.toFixed(0)}`);
+    console.log('---------------------------------');
+  }
+}
 
 const results = calculateInvestment();
 
