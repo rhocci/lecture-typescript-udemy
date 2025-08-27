@@ -13,7 +13,7 @@ function calculateInvestment(data) {
         const currentTotal = currentInvestment + (currentInvestment * expectedReturn) / 100;
         const currentReturn = currentTotal - currentInvestment;
         const result = {
-            year: i,
+            year: i + 1,
             total: currentTotal,
             totalInvestment: currentInvestment,
             totalReturn: currentReturn,
@@ -29,7 +29,7 @@ function printResults(results) {
         console.log('Total: ', result.total);
         console.log('Toal Contributions: ', result.totalInvestment);
         console.log('Total Interest Earned: ', result.totalReturn);
-        console.log('----------------------------');
+        console.log('---------------------------');
     });
 }
 const results = calculateInvestment({
