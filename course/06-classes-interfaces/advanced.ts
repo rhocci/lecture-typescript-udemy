@@ -1,5 +1,5 @@
 class UserName {
-  private _firstName: string = '';
+  protected _firstName: string = '';
   private _lastName: string = '';
 
   set firstName(name: string) {
@@ -40,6 +40,25 @@ class Employee extends UserName {
   }
 
   work() {
-    // ...
+    console.log(this._firstName);
+    // super._firstName
   }
+}
+
+abstract class UIElement {
+  constructor(public identifier: string) {}
+
+  clone(targetLocation: string) {
+    // logic to duplicate the UI Element
+  }
+}
+
+// const uiElement = new UIElement();
+
+class SideDrawerElement extends UIElement {
+  constructor(public identifier: string, public position: 'left' | 'right') {
+    super(identifier);
+  }
+
+  // ...
 }
