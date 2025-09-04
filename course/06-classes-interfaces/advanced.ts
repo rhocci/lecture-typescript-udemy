@@ -33,3 +33,13 @@ maxName.firstName = 'Max';
 maxName.firstName = 'Schwarzmuller';
 
 console.log(maxName.fullName);
+
+class Employee extends UserName {
+  constructor(public jobTitle: string) {
+    super();
+  }
+
+  work() {
+    // ...
+  }
+}
