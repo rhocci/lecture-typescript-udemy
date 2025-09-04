@@ -22,6 +22,12 @@ class AuthenticatableUser implements Authenticatable {
   }
 }
 
+// ...
+
+function authenticate(user: Authenticatable) {
+  user.login();
+}
+
 // type Authenticatable = {
 //   role: string;
 // }
