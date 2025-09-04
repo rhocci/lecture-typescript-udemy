@@ -6,6 +6,10 @@ interface Authenticatable {
   logout(): void;
 }
 
+interface AuthenticatableAdmin extends Authenticatable {
+  role: 'adimin' | 'superadmin';
+}
+
 class AuthenticatableUser implements Authenticatable {
   constructor(
     public userName: string,
