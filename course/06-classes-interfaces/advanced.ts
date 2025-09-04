@@ -19,6 +19,12 @@ class UserName {
   get fullName() {
     return this._firstName + ' ' + this._lastName;
   }
+
+  static eid = 'USER';
+
+  static greet() {
+    console.log('Hello!');
+  }
 }
 
 const maxName = new UserName();
