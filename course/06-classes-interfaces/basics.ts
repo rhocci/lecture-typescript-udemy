@@ -1,5 +1,11 @@
 class User {
-  constructor(public name: string, public age: number) {}
+  hobbies: string[] = [];
+
+  constructor(public name: string, private age: number) {}
+
+  greet() {
+    console.log('My age: ' + this.age);
+  }
 }
 
 const max = new User('Max', 36);
