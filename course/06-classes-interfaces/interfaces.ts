@@ -6,6 +6,10 @@ interface Authenticatable {
   logout(): void;
 }
 
+// type Authenticatable = {
+//   role: string;
+// }
+
 let user: Authenticatable;
 
 user = {
