@@ -10,8 +10,8 @@ store.isInstructor = true;
 
 let nameStore: DataStore<string> = {};
 
-function merge<T>(a: T, b: T) {
+function merge<T, U>(a: T, b: U) {
   return [a, b];
 }
 
-const ids = merge(1, 2);
+const ids = merge(1, 'Max');
